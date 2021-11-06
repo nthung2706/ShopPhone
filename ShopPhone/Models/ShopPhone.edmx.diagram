@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4a52be21a044686bc69e656e0ee4b71" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopPhoneModel.DatHang" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.DatHang_ChiTiet" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.Hang" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.KhachHang" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.Loai" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.NoiSanXuat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.SanPham" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopPhoneModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="ShopPhoneModel.FK__DatHang__KhachHa__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__DatHang__TaiKhoa__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__DatHang_C__DatHa__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__DatHang_C__SanPh__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__SanPham__Hang_ID__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__SanPham__Loai_ID__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="ShopPhoneModel.FK__SanPham__NoiSanX__34C8D9D1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

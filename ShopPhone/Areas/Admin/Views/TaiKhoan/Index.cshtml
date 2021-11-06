@@ -1,0 +1,104 @@
+﻿@model IEnumerable<ShopPhone.Models.TaiKhoan>
+
+@{
+    ViewBag.Title = "Tài Khoản";
+}
+
+<div class="card mt-3">
+    <h5 class="card-header">@ViewBag.Title</h5>
+    <div class="card-body">
+        <p><a class="btn btn-primary" href="@Url.Action("Create")" role="button"><i class="fas fa-plus"></i> Thêm mới</a></p>
+        <table id="Pagination" class="table table-bordered table-hover table-sm mb-0 text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.HoTen)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TenDangNhap)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MatKhau)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoDienThoai)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DiaChi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ChucVu)
+                    </th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int stt = 1;}
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@stt</td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenDangNhap)
+                    </td>
+                    <td>
+                        @Html.Raw("\u2022\u2022\u2022\u2022\u2022")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoDienThoai)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiaChi)
+                    </td>
+                    <td>
+
+                        @if (item.ChucVu == 1)
+                        {
+                            <span class="badge badge-danger">Quản lý</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-warning">Nhân viên</span>
+                        }
+                    </td>
+                    <td>
+                        <a href=" @Url.Action("Edit", new { id = item.ID })"><i class="fas fa-edit"></i></a> |
+                        <a href=" @Url.Action("Delete", new { id = item.ID })"><i class="fas fa-trash-alt text-danger"></i></a>
+                    </td>
+                </tr>
+                    stt++;
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#Pagination').DataTable({
+                "language": {
+                    "lengthMenu": "Hiển thị _MENU_ Sản phẩm",
+                    "zeroRecords": "Không có sản phẩm nào",
+                    "info": "Từ trang _PAGE_ đến _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "first": "First",
+                        "last": "Last",
+                        "next": "Trước",
+                        "previous": "Sau"
+                    },
+                    "search": "Tìm Kiếm:",
+                }
+            });
+        });
+    </script>
+
+}

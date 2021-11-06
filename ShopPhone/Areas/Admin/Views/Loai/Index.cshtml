@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ShopPhone.Models.Loai>
+
+@{
+    ViewBag.Title = "Loại";
+}
+<div class="card mt-3">
+    <h5 class="card-header">@ViewBag.Title</h5>
+    <div class="card-body">
+        <p>
+            <a class="btn btn-success" href="@Url.Action("Create")" role="button"><i class="fas fa-plus"></i> Thêm mới</a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenLoai)
+                </th>
+                <th>Thao Tác</th>
+            </tr>
+            @{ int stt = 1;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@stt</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenLoai)
+                    </td>
+                    <td>
+                        <a href=" @Url.Action("Edit", new { id = item.ID })"><i class="fas fa-edit"></i></a> |
+                        <a href=" @Url.Action("Delete", new { id = item.ID })"><i class="fas fa-trash-alt text-danger"></i></a>
+                    </td>
+                </tr>
+                stt++;
+            }
+
+        </table>
+    </div>
+</div>
+

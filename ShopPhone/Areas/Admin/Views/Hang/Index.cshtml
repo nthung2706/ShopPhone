@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ShopPhone.Models.Hang>
+
+@{
+    ViewBag.Title = "Nhà sản xuất";
+}
+
+<div class="card mt-3">
+    <h5 class="card-header">@ViewBag.Title</h5>
+    <div class="card-body">
+        <p><a class="btn btn-primary" href="@Url.Action("Create")" role="button"><i class="fas fa-plus"></i> Thêm mới</a></p>
+        <table id="Pagination" class="table table-bordered table-hover table-sm mb-0 text-center">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TenHang)
+                    </th>
+                    <th></th>
+            </thead>
+            <tbody>
+                @{ int stt = 1;}
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@stt</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenHang)
+                        </td>
+                        <td>
+                            <a href=" @Url.Action("Edit", new { id = item.id })"><i class="fas fa-edit"></i></a> |
+                            <a href=" @Url.Action("Delete", new { id = item.id })"><i class="fas fa-trash-alt text-danger"></i></a>
+                        </td>
+                    </tr>
+                    stt++;
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#Pagination').DataTable({
+                "language": {
+                    "lengthMenu": "Hiển thị _MENU_ Sản phẩm",
+                    "zeroRecords": "Không có sản phẩm nào",
+                    "info": "Từ trang _PAGE_ đến _PAGES_",
+                    "infoEmpty": "No records available",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "paginate": {
+                        "first": "First",
+                        "last": "Last",
+                        "next": "Trước",
+                        "previous": "Sau"
+                    },
+                    "search": "Tìm Kiếm:",
+                }
+            });
+        });
+    </script>
+
+}

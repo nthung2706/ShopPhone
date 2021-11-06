@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ShopPhone.Models.Hang>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+        <i class="fas fa-list-alt"></i>Thương hiệu
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        @foreach (var item in Model)
+        {
+            <a class="dropdown-item" href="@Url.Action("Producer", "Home" , new { id = item.id })">
+                <i class="fas fa-fw fa-link"></i>@item.TenHang
+
+            </a>
+        }
+    </div>
+</li>
+

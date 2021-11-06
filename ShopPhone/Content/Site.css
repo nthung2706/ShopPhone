@@ -1,0 +1,471 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/*.dl-horizontal dt {
+    white-space: normal;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 1000px;
+}
+
+.table td, tr {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card-footer {
+    background-color: #fff0;
+}*/
+
+/* BASIC */
+
+/*html {
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+a {
+    color: #92badd;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 40px 8px 10px 8px;
+    color: #cccccc;
+}
+*/
+
+
+ Login 
+
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+#formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+    color: #cccccc;
+}
+
+h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+    .fadeIn.first {
+        -webkit-animation-delay: 0.4s;
+        -moz-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    }
+
+    .fadeIn.second {
+        -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+
+    .fadeIn.third {
+        -webkit-animation-delay: 0.8s;
+        -moz-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+    }
+
+    .fadeIn.fourth {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+    .underlineHover:hover:after {
+        width: 100%;
+    }
+
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+}
+
+#icon {
+    width: 25%;
+    margin: 25px;
+}
+
+
+.login{
+    width: 350px;
+    margin-left: 50px;
+}
+
+.Login-name{
+    width: 108px;
+}
+
+
+.header2 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300
+}
+
+    .header2.bg-success-gradiant {
+        background: #2cdd9b;
+        background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+        background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+        background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+        background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+        background: linear-gradient(to right, #dd2c2c 0%, #cacaca 100%);
+    }
+
+    .header2 .font-12 {
+        font-size: 12px
+    }
+
+    .header2 .dropdown-item {
+        padding: 8px 1rem;
+        color: #8d97ad
+    }
+
+    .header2 .h2-nav .navbar-nav .nav-item .nav-link {
+        padding: 12px 0px;
+        color: #ffffff;
+        font-weight: 400
+    }
+
+        .header2 .h2-nav .navbar-nav .nav-item .nav-link:hover {
+            color: #263238
+        }
+
+    .header2 .h2-nav .navbar-nav .nav-item {
+        margin: 0 20px
+    }
+
+@media (min-width: 1024px) {
+    .header2 .navbar-nav > .dropdown .dropdown-menu {
+        min-width: 210px;
+        margin-top: 0px
+    }
+}
+
+@media (min-width: 1024px) {
+    .header2 .dropdown-submenu:hover > .dropdown-menu {
+        display: block
+    }
+}
+
+.header2 .dropdown-toggle::after {
+    display: none
+}
+
+@media (min-width: 1024px) {
+    .header2 .hover-dropdown .navbar-nav > .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0px
+    }
+}
+
+.header2 .btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40
+}
+
+    .header2 .btn-dark:hover {
+        color: #fff;
+        background-color: #23272b;
+        border-color: #1d2124
+    }
+
+.header2 .h2-nav .navbar-nav .nav-item .btn {
+    opacity: 0.5
+}
+
+    .header2 .h2-nav .navbar-nav .nav-item .btn:hover {
+        opacity: 1
+    }
+
+.header2 .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0;
+    border-radius: 0.25rem;
+    display: none
+}
+
+body{
+    background-color: #f1f1f1
+}
+
+
+.card {
+    margin-top: 50px;
+    border: none
+}
+
+.head1 {
+    font-weight: 600;
+    font-size: 30px
+}
+
+.bdr {
+    border-bottom: 1.5px solid #FFB74D;
+    width: 65px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.card-footer {
+    justify-content: space-between;
+    border: none;
+    background: none;
+}
+
+.footer-right > i {
+    margin-left: 15px
+}
+
+.fa-hand-holding-usd {
+    color: #FFB74D
+}
+
+.fa-handshake {
+    color: #FFB74D
+}
+
+.card-title {
+    margin-bottom: .75rem;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 1.75rem
+}
+
+.learn-more {
+    color: #FFB74D
+}
+
+.fa-angle-right {
+    margin-left: 10px
+}
+
+.fa-3x {
+    color: #FFB74D
+}
+
+.card-content {
+    padding-right: 40px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+    .card-content > p {
+        color: #9E9E9E
+    }
+
+.heading {
+    position: relative;
+    top: 75px
+}
+
+.follow-text {
+    color: #9E9E9E
+}
+
+
+
+.card-body {
+    background-color: #f0f0f036;
+}
+
+.center{
+    text-align: center;
+}
+.list-books > a > img:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+
+
+.col-md-7 {
+    margin-top: 20px;
+    margin-left: 1330px;
+}
+
+
+
+
+
+
+
+
+
